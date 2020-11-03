@@ -1,9 +1,10 @@
 const express = require('express');
-
+const db = require('./postDb');
 const router = express.Router();
 
 router.get('/', (req, res) => {
   // do your magic!
+  console.log('working');
 });
 
 router.get('/:id', (req, res) => {
@@ -16,6 +17,9 @@ router.delete('/:id', (req, res) => {
 
 router.put('/:id', (req, res) => {
   // do your magic!
+  const { id } = req.params;
+  const change = req.body;
+  
 });
 
 // custom middleware
